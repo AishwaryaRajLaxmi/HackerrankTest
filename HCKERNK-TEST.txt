@@ -1,0 +1,216 @@
+Take in the count of aliens and humans as integer inputs and then,
+
+If the count of humans is zero then print "Humans vanished".
+
+or If the count of humans is less than aliens, then aliens remaining = aliens - humans
+
+or if the count of humans is equal to greater than aliens, then print "Humans are living"
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+         int y=sc.nextInt();
+    
+        if(x==0){
+            System.out.println("Human vanished");
+        }
+        else if(x<y){
+            System.out.println("aliens remaining="+(x-y));
+        }
+        else if(x>=y){
+            System.out.println("Humans are living");
+            System.out.println(y);
+        }
+        
+        
+    }
+}
+=============================================================================================================================================================
+
+
+*****
+  *
+  *
+  *
+  *
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        System.out.println("*****");
+            System.out.println("  *  ");
+            System.out.println("  *  ");
+            System.out.println("  *  ");
+         System.out.println("  *  ");
+    }
+}
+==========================================================================================================================================================
+
+Take the parallel sides and height of the trapezium as an integer input and print the area of the trapezium as an integer output.
+
+Input Format
+
+For each test case, Shorter paraller side will be given as an integer input in the first line. Longer parallel side will be given as an integer input in the
+
+ second line, Height of the trapezium will be given as an integer input in the third line.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b= sc.nextInt();
+        int h=sc.nextInt();
+        System.out.println(((a+b)*h)/2);
+
+    }
+}
+==================================================================================================================================================
+
+print "Divisible by 3 and 4" if the given integer is divisible by both 3 and 4
+
+print "Not Divisible" if the given integer is not divisible by both 3 and 4.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        
+        if(num%3==0 && num%4==0){
+            System.out.println("Divisible by 3 and 4");
+        }
+        else{
+            System.out.println("Not Divisible");
+            
+        }
+    }
+}
+=========================================================================================================================================================
+
+Take in a character as a character input, then jump two steps to the right and reach a final character.
+
+For eg. if the input character is 'a' then after jumping two steps, the final character is 'c'.
+
+if the input character is 'D' then after jumping two steps, the final character is 'F'.
+
+. Once you reach the final character, make a string of length equal to three such that each character of the string contains the final character.
+
+In the end, print the final string.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        
+        if(ch>='a' && ch<='z')
+        {
+           ch=(char)(ch+2);
+                   
+        }
+        else if(ch>='A' && ch<='Z')
+        {
+            ch=(char)(ch+2);
+        }
+        
+        for(int i=1;i<=3;i++)
+        System.out.print((char)(ch));
+        
+    }
+}
+
+==============================================================================================================================================================
+Take an integer input n and print the last 2 digits of the number in the integer data-type format.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+    
+        System.out.print(num%100);
+    }
+}
+
+==============================================================================================================================================================
+Take n as an integer input.
+
+Then print only those numbers from 1 till n (both 1 and n are inclusive)
+
+which are divisible by only 2 and not 3,
+
+or which are divisible by only 3 and not 2,
+
+Also, make sure that if there comes a number that is divisible by both 2 and 3 and is also divisible by 5, then print that number.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        
+        for(int i=1;i<=num;i++)
+        { if((i%2==0 && i%3!=0)||(i%3==0 && i%2!=0) || (i%2==0 && i%3==0 && i%5==0))
+          
+            
+             {System.out.println(i);
+              }
+           
+        }
+    }
+}
+
+==============================================================================================================================================================
+
+You have to print the nth number in the Rachonacci Series
+
+In Rachonacci Series,
+
+First term T(1) is always 3,
+
+Second term T(2) is always 4,
+
+Third term T(3) is always 5,
+
+Fourth term T(4) is always 6,
+
+Now every Term T(N)(where N>=5) is calculated as described below
+
+T(N)=T(N-1) + 2*T(N-2) + 3*T(N-3) + 4*T(N-4) + 5
